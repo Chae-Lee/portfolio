@@ -1,0 +1,303 @@
+:root {
+  --border:8px solid #81D8D0;
+  --fontColor:#708090;
+  --fontBorder: 3px solid #708090;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(119, 181, 231);
+}
+
+h1 {
+background-color:#F0F8FF;
+padding-left: 60px;
+padding-right: 10px;
+text-align: end;
+color: var(--fontColor);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 400px;
+  margin-right: 50px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+#hero-image {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  background-image: url("../images/02-portfolio-3.jpg");
+  display:flex;
+  justify-content: end;
+}
+
+#hero-image h2 {
+  margin-top: 120px;
+  width: auto;
+}
+
+#hero-text {
+  background-color:lightblue;
+  display: flex;
+  padding:10px;
+  width: 250px;
+  height: 50px;
+}
+
+h2 {
+background-color: lightblue;
+display:flex;
+flex-direction: column;
+padding:10px;
+width:250px;
+height:50px;
+justify-content: space-evenly;
+text-align: end;
+}
+
+.hero-banner {
+  display: grid;
+}
+
+
+/* About Me section */
+#about {
+  margin: 10px;
+  display:grid;
+  min-height: 300px;
+  height: 300px;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: 
+  "headline aboutMe";
+}
+
+#aboutMe {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+#headline {
+  border-right: var(--fontBorder);
+}
+
+/* Work section */
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+#work {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: 
+  "workTitle workExamples";
+  height: 730px;
+  padding-top: 20px;
+  margin: 10px;
+}
+
+#workTitle {
+  border-right: var(--fontBorder);
+}
+
+#workExamples {
+  border-style: bold;
+}
+
+.workGrid {
+  margin: 0px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 350px 180px 180px;
+  grid-template-areas:
+  "refactor refactor"
+  "LED calculator"
+  "pastelPuzzles runBuddy";
+  width: 55vw;
+  margin-left: 10px;
+}
+
+#refactor {
+  grid-area: refactor;
+  background-image: url("../images/marketplace.jpeg") ;
+  border: var(--border);
+}
+
+#LED {
+  grid-area:LED;
+  background-image: url("../images/02-portfolio-1.jpg");
+  border: var(--border);
+}
+
+#calculator {
+  grid-area:calculator;
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: var(--border);
+}
+
+#pastelPuzzles {
+  grid-area:pastelPuzzles;
+  background-image: url("../images/02-portfolio-3.jpg");
+  border: var(--border);
+}
+
+#runBuddy {
+  grid-area:runBuddy;
+  background-image: url("../images/02-run-buddy.jpg");
+  border: var(--border);
+}
+
+.workGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  display: grid;
+  align-content: end;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.heading {
+background-color: lightblue;
+padding: 10px 15px 30px 15px;
+height: 35px;
+width: fit-content;
+color: white;
+font-size: 18px;
+border-bottom: 5px solid #81D8D0;
+display:flex;
+}
+
+/* Contacts section */
+#contact {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding-top: 40px;
+  margin: 10px;
+}
+
+#contactMe {
+  border-right: var(--fontBorder);
+}
+
+.contactLinks a {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  color: var(--fontColor);
+  padding: 20px;
+}
+
+.contactLinks ul {
+  display:flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+h3 {
+  padding-left: 50px;
+  padding-bottom: 50px;
+  font-size:40px;
+  font-family:Arial, Helvetica, sans-serif;
+  padding-right:30px;
+  color: var(--fontColor);
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* Media Queries - Tablet */
+@media screen and (max-width:768px) {
+/* Header*/
+  h1 {
+    background-color:#F0F8FF;
+    padding-left: 60px;
+    padding-right: 10px;
+    text-align: end;
+    color: var(--fontColor);
+    font-size: 20px;
+    }
+/* Work section */
+  .workGrid {
+    margin: 0px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "refactor"
+    "LED "
+    "calculator"
+    "pastelPuzzles"
+     "runBuddy";
+    width: auto;
+  }
+  h3 {
+    padding-left: 20px;
+    padding-bottom: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: end;
+    padding-right:30px;
+    color: var(--fontColor);
+    font-size: 20px;
+    justify-content: center;
+  }
+
+  /* Contact Me section */
+  .contactLinks ul {
+    display:flex;
+    width: auto;
+    padding:0%;
+    margin: auto;
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+  .contactLinks a {
+    font-weight: bold;
+    color: var(--fontColor);
+    padding: auto;
+    width: auto;
+    margin-bottom: 50px;
+  }
+}
+/* Media Queries - Laptop */
+
+@media screen and (max-width:980px) {
+  h3 {
+    padding-left: 20px;
+    padding-bottom: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-right:30px;
+    color: var(--fontColor);
+    font-size: 30px;
+    justify-content: flex-end;
+    display: flex;
+  }
+}
